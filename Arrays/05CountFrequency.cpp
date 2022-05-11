@@ -62,10 +62,22 @@ int main()
 
 Solution 2 : Using  Map
                         
+                        
+                       Intitution : 
+                                      We can use a map of value and frequency pair, in which we can easily update 
+                                      the frequency of an element if it is already present in the map, 
+                                      if it is not present in the map then insert it in the map with frequency as 1. 
+                                       After completing all the iterations, print the value frequency pair. 
+
                        Approach :
-                                   1.
+                                    1. Take a unordered map <int, int > data type .
+                                    2. using a for loop iterate the array.
+                                    3.If the element is not present in the map then return the frequency 1 , either existing the frequency by 1.
+                                    4. print the pair values.
 
-
+                     Complexity :
+                                      Time Complexity : 0(N)
+                                     Space Complexity : 0(1)
 
 
 
