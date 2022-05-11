@@ -55,3 +55,43 @@ int main()
    Frequency(A,n);
    return 0;
 }
+
+
+
+
+
+Solution 2 : Using  Map
+                        
+                       Approach :
+                                   1.
+
+
+
+
+
+Code 2:
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+void Frequency(int arr[], int n)
+{
+    unordered_map<int, int> mp;
+    for(int i=0; i<n;i++)
+    {
+        mp[arr[i]]++;
+    }
+
+    for(auto s: mp)
+    {
+        cout<<s.first<<" : "<<s.second<<endl;
+    }
+}
+
+int main()
+{
+    int arr[] = {10, 7, 10, 7, 8};
+    int n =sizeof(arr)/sizeof(arr[0]);
+    Frequency(arr,n);
+}
