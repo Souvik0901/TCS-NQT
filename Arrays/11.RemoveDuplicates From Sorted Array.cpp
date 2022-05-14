@@ -1,13 +1,22 @@
 
 
 Solution 1 :  Using HashMap
+
+                 Intitution: Its applicable for sorted non-sorted both arrays.
+                   
+                 Complexity: 
+                             Time Complexity: 0(NlogN)+0(N).   for using set nlogn time takes.
+                             Space Complexity : 0(N).
+                               
+                               
+ Code 1: 
               
 #include<bits/stdc++.h>
 
 using namespace std;
 void RemoveDuplicates(int A[], int n)
 {
-    set<int > RD;
+    set<int> RD;
     for(int i =0; i<n ; i++)
         RD.insert(A[i]);
 
@@ -32,13 +41,20 @@ int main()
 
 
 
+
+
+
 Solution 2:  Using two pointer.
   
                  Approach :
                             1. 
                             2.
                             3.
-             
+                 Time Complexity : 0(N)
+                 Space Complexity : 0(1)
+  
+ Code 2:
+
 #include<bits/stdc++.h>
 using namespace std;
 
