@@ -1,4 +1,15 @@
+Solution :
 
+
+
+
+Solution : Using Map 
+
+
+                   Time Complexity : 0(N)     ,  Iterate The Array once.
+                   Space Complexity : 0(N)    ,  Map is used for insert elements
+
+CODE 1:
 
 #include<bits/stdc++.h>
 using namespace  std;
