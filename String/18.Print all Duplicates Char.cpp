@@ -35,6 +35,35 @@ int main()
 
 Solution : 2
   
+                Time Complexity : 0(NlogN)
+                Space Complexity : 0(1)
+   
   Code:
 
+
+#include<bits/stdc++.h>
+using namespace std;
+
+void Print(string st)
+{
+    map<char , int> entry;
+
+    for(int i=0; i<st.length(); i++)
+      entry[st[i]]++;
+
+    for(pair<char,int>x:entry)
+    {
+         if(x.second>1)
+         cout<<x.first<<"--> "<<x.second<<"\n";
+    }
+    
+
+}
+
+int main()
+{
+    string str="Robinhood classy flower";
+    Print(str);
+    
+}
 
