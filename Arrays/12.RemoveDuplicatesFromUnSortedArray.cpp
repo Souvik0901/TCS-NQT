@@ -1,6 +1,6 @@
 
-                              Time Complexity; 0(N)
-                                Space : 0(N)
+                                 Time Complexity: 0(N)  Reason:   Iteration in array , searching hash table
+                                Space Complexity : 0(N)
 #include<bits/stdc++.h>
 using namespace std;
 
