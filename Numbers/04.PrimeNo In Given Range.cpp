@@ -51,3 +51,31 @@ class Solution {
         return ans;
     }
 };
+
+
+Greeks For Geeks :
+             Using Class 
+             
+             
+    class Solution {
+    bool isprime(int n)
+    {
+
+        for(int i=2; i<=sqrt(n); i++)
+        {
+            if((n%i)==0)
+             return false;
+        }
+        return true;
+    }
+  public:
+    vector<int> primeRange(int M, int N) {
+       vector<int>ans; 
+        for(int i=M; i<=N; i++)
+        {
+             if(isprime(i) and i>1)
+                  ans.push_back(i);
+        }
+        return ans;
+    }
+};
