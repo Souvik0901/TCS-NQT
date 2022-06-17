@@ -24,3 +24,30 @@ int main()
          }
      }
 }
+
+
+
+
+
+Next Approach :
+
+class Solution {
+  public:
+    vector<int> primeRange(int M, int N) {
+       vector<int>ans; 
+        for(int i=M; i<=N; i++)
+        {
+            if(i==0 || i==1 )
+                continue;
+             int count =0;     
+                for(int k=2; k*k<=i; k++)
+                 {
+                     if(i%k==0)
+                       count++;
+                 }
+                 if(count==0)
+                  ans.push_back(i);
+        }
+        return ans;
+    }
+};
