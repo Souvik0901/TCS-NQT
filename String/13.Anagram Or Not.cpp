@@ -71,5 +71,41 @@ int main()
 
 }
 
+Code: 3
+           Time Complexity : 0(N)
+           Space Complexity : 0(1)
+                      
+                      
+                      
+       
+#include<bits/stdc++.h>
+using namespace std;
 
+bool isanagram(string st1, string st2)
+{
+    int count[26]={0};
+    for(int i=0; i<st1.length(); i++)
+        count[st1[i]-'a']++;
+
+    for(int i=0; i<st2.length();i++)
+        count[st2[i]-'a']--;
+ 
+    for(int i=0; i<26; i++)
+    {
+        if(count[i]!=0)
+          return false;
+    }
+   return true;
+}
+
+int main()
+{
+    string st1="teaher";
+    string st2="reahiet";
+
+    if(isanagram(st1, st2))
+       cout<<"It's Anagram ";
+    else
+       cout<<"It's Not Anagram ";
+}
 
