@@ -1,18 +1,21 @@
 
+
 #include<bits/stdc++.h>
 using namespace std;
 
 void solve(int n, int i)
-{
-   if(i>n)
+{ 
+   // base case
+   if(i<1)
    {
-     return;
+      return;
    }
+   solve(n,i-1);
    cout<<i<<endl;
-   solve(n,i+1);
 }
+
 int main()
 {
-  int n =5;
-  solve(n,1);
+    int n =5;
+    solve(n, 5);
 }
