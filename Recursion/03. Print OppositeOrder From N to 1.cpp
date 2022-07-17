@@ -5,15 +5,16 @@ using namespace std;
 
 void solve(int n, int i)
 {
-   if(i>n)
+   if(i==0)
    {
-     return;
+      return;
    }
    cout<<i<<endl;
-   solve(n,i+1);
+   solve(n,i-1);
 }
+
 int main()
 {
-  int n =5;
-  solve(n,1);
+   int n = 5;
+   solve(5,5);
 }
