@@ -23,3 +23,30 @@ int main()
 
 
 
+//Recursive Approach:
+#include<bits/stdc++.h>
+using namespace std;
+
+int Fibonacii(int n)
+{  
+    
+    if(n<=1)
+    {
+      return n;
+    }
+    
+     return Fibonacii(n-1)+Fibonacii(n-2);
+}
+
+
+int main()
+{
+   int n= 8;
+   int i=0;
+   while(i<n)
+   {
+    cout<<Fibonacii(i)<<" ";
+    i++;
+   }
+   
+}
