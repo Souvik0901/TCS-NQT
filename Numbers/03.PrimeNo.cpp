@@ -1,5 +1,5 @@
 
-
+Solution 1:
                         Time Complexity : 0(N)
                           Space Complexity : 0(1)
 #include<bits/stdc++.h>
@@ -63,3 +63,30 @@ int main()
     }
 
 }
+
+
+
+
+Approach 3: GFG 
+
+
+class Solution{
+public:
+    int isPrime(int N){
+        // code here
+        if(N==1) return 0;
+        
+        int count =0;
+        for(int i=1; i<=sqrt(N); i++)
+          if(N%i ==0)
+             count++;
+             
+        if (count==1)
+          return 1;
+        else
+          return 0;
+    }
+};
+
+
+
