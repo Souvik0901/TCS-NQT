@@ -73,7 +73,7 @@ int main()
 }
 
 
->> Kedane's Algorithm: 3
+>> Kadane's Algorithm: 3
      
        
 >> Code:
