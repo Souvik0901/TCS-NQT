@@ -73,4 +73,29 @@ int main()
 }
 
 
+>> Kedane's Algorithm:
+       
+#include<bits/stdc++.h>
+using namespace std;
+
+int MaxProductSubArray(vector<int>arr)
+{
+   int prod=1;
+   int res = arr[0];
+   for(int i=0; i<arr.size();i++)
+   {
+       prod*=arr[i];
+       res= max(res,prod);
+      
+   }
+   return res;
+
+}
+
+int main()
+{
+    vector<int>arr={2,-7,-3,-1,5,6,0,2};
+    int res = MaxProductSubArray(arr);
+    cout<<res;
+}
 
