@@ -73,9 +73,10 @@ int main()
 }
 
 
->> Kadane's Algorithm: 3
+>> Kadanes Algorithm -- 3
      
-       
+         Time Complexity : 0(N)
+          Space complexity : 0(1)
 >> Code:
 
 #include<bits/stdc++.h>
@@ -83,13 +84,20 @@ using namespace std;
 
 int MaxProductSubArray(vector<int>arr)
 {
-   int prod=1;
+   int ma = arr[0];
+   int mi= arr[0];
    int res = arr[0];
-   for(int i=0; i<arr.size();i++)
+
+   for(int i=1; i<arr.size();i++)
    {
-       prod*=arr[i];
-       res= max(res,prod);
-      
+
+      if(arr[i] <0) 
+        swap(ma,mi);
+
+      ma = max(arr[i], ma*arr[i]);
+      mi = min(arr[i], mi*arr[i]);
+
+     res= max(res, ma);
    }
    return res;
 
