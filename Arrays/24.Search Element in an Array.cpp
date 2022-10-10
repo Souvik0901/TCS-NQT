@@ -30,31 +30,36 @@ Solution 2 : Binary Search
 #include<bits/stdc++.h>
 using namespace std;
 
- int Bsearch(int arr[], int s,int start, int end)
- {
-     int ans;
-    int mid= start+(end-start)/2;
-    while(start<end)
+int BinarySearch(vector<int>nums, int search, int low, int high)
+{
+    int mid = low+(high-low)/2;
+
+    while(low<high)
     {
-        if(arr[mid]==s)
-        {
-            ans= mid;
+        if(nums[mid]==search)
+        {  
+            return  mid;
             break;
+        } 
+        else if(nums[mid]<search)
+        {
+            return BinarySearch(nums,search,mid+1,high);
         }
-        else if(arr[mid]<s)
-            return Bsearch(arr,s,mid+1,end);
-        else if(arr[mid]>s)
-            return Bsearch(arr,s,start,end-1);
+
+        else{
+            return BinarySearch(nums,search,low,mid-1);
+        }
     }
-    return mid;
-    
- }
+    return -1;
+}
+
 
 int main()
 {
-    int arr[]={2,9,23,58,76,81};
-    int Search=23;
-    int n=sizeof(arr)/sizeof(arr[0]);
-    cout<<Bsearch(arr,Search,0,n-1);
-
+   vector<int>nums={2,3,5,6,7,8,9};
+   int search= 3;
+   int n = nums.size();
+   int ans = BinarySearch(nums,search,0,n-1);
+   cout<<ans;
 }
+
