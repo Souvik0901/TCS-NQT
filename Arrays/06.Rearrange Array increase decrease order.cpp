@@ -42,4 +42,36 @@ int main()
    Rearrenge(Arr);
    
 }
+
+
+Approach : 2
+  
+   Code:
+   #include<bits/stdc++.h>
+using namespace std;
+
+void func(int a[], int n)
+{
+     sort(a, a+n);
+     int l =n/2;
+     int h = n-1;
+     while(l<h)
+     { 
+        swap(a[l],a[h]);
+        l++;
+        h--;
+     }
+     
+}
+
+int main()
+{
+     int arr[]={7,9,0,2,3,7};
+     int n = sizeof(arr)/sizeof(arr[0]);
+     func(arr, n);
+     for(int i=0; i<n; i++)
+     {
+        cout<<arr[i]<<" ";
+     }
+}
                                           
